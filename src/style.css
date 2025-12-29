@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: halloween, lemonade --default;
+}
+
+@font-face {
+  font-family: "Tsumachu";
+  src: url("./assets/fonts/Qomolangma-Tsumachu.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Dunhuang";
+  src: url("./assets/fonts/Qomolangma-Dunhuang.ttf") format("truetype");
+}
