@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ArticleFilter from "../components/ArticleFilter.vue";
+import ArticleFilter from "@/components/ArticleFilter.vue";
 </script>
 
 <template>

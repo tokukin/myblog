@@ -5,13 +5,13 @@ import {
   type RouteRecordRaw,
 } from "vue-router";
 // 导入页面组件（TS会自动校验文件路径和组件类型）
-import Home from "../views/Home.vue";
-import About from "../views/About.vue";
-import NotFound from "../views/NotFound.vue";
-import Links from "../views/Links.vue";
-import Tags from "../views/Tags.vue";
-import ArticleList from "../views/ArticleList.vue";
-import ArticleDetail from "../views/ArticleDetail.vue"; // 导入详情页组件
+import Home from "@/views/Home.vue";
+import About from "@/views/About.vue";
+import NotFound from "@/views/NotFound.vue";
+import Links from "@/views/Links.vue";
+import Tags from "@/views/Tags.vue";
+import ArticleList from "@/views/ArticleList.vue";
+import ArticleDetail from "@/views/ArticleDetail.vue"; // 导入详情页组件
 
 // 第一步：扩展路由元信息的TypeScript类型（核心！解决meta类型提示）
 declare module "vue-router" {

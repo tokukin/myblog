@@ -21,7 +21,7 @@
 </template>
 
 <script setup lang="ts">
-import { siteConfig } from "../config/site";
+import { siteConfig } from "@/config/site";
 // console.log(siteConfig);
 </script>
 

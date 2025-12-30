@@ -4,7 +4,7 @@
       <li>
         <div class="list-top">
           <div class="list-top-left">
-            <img class="size-10 rounded-box" src="../assets/auther.png" />
+            <img class="size-10 rounded-box" src="@/assets/auther.png" />
             <div>
               <div>关于作者</div>
               <div class="text-xs uppercase font-semibold opacity-60">
@@ -50,7 +50,7 @@
 </template>
 
 <script setup lang="ts">
-import { siteConfig } from "../config/site";
+import { siteConfig } from "@/config/site";
 import { ref } from "vue";
 
 import About from "@/pages/about.md";

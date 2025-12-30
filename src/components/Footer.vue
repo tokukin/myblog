@@ -25,7 +25,7 @@
         "
         ><img
           style="width: 15px; height: 15px"
-          src="../assets/batb.png"
+          src="@/assets/batb.png"
           :alt="`${siteConfig.mps_beian}`"
         />{{ siteConfig.mps_beian || "公网安备号" }}</a
       >
@@ -65,7 +65,7 @@ import { ref } from "vue";
 
 // 自动获取当前年份（避免手动更新）
 const currentYear = ref(new Date().getFullYear());
-import { siteConfig } from "../config/site";
+import { siteConfig } from "@/config/site";
 </script>
 
 <style scoped>
