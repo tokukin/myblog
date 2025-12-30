@@ -1,6 +1,18 @@
 <template>
   <div id="introduction">
-    <h1 class="heading">{{ siteConfig.title }}</h1>
+    <h1 class="heading">
+      {{ siteConfig.title }}
+    </h1>
+    <span class="text-rotate text-2xl text-primary">
+      <span class="justify-items-start">
+        <span>开心快乐每一天!</span>
+        <span>扎西德勒!</span>
+        <span>身体健康!</span>
+        <span>1376!</span>
+        <span>热爱每一天!</span>
+        <span>😊😊😊😊😊</span>
+      </span>
+    </span>
     <div class="paragraph">
       <p>{{ siteConfig.subtitle }}</p>
       <p>欢迎翻阅最新文章，或者直接所有文章检索历史内容。</p>
@@ -17,11 +29,11 @@ import { siteConfig } from "../config/site";
 .heading {
   font-size: 2rem;
   font-weight: bold;
-  color: var(--color-primary-content);
+  color: var(--color-base-content);
 }
 .paragraph {
   font-size: 1.2rem;
-  color: var(--color-secondary-content);
+  color: var(--color-base-content);
 }
 #introduction {
   display: flex;

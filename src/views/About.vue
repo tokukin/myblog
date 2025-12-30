@@ -36,7 +36,6 @@
         </div>
         <div class="list-bottom">
           <p>
-            80后，INFP，坐标甘肃兰州，一个通信工程师。<br />
             {{ siteConfig.auther_description }}
           </p>
         </div>
@@ -54,7 +53,7 @@
 import { siteConfig } from "../config/site";
 import { ref } from "vue";
 
-import About from "../docs/about.md";
+import About from "@/pages/about.md";
 // 定义响应式变量：标记图片是否加载完成
 const isImageLoaded = ref(false);
 

@@ -5,11 +5,6 @@ import type { Ref } from "vue"; // ✅ 纯类型导入必须加 import type
 // 定义主题类型枚举（规范取值范围）
 export type MdThemeType = "auto" | "light" | "dark";
 
-// 导入主题 CSS 路径（Vite 专用，?url 后缀返回解析后的路径字符串）
-import autoThemeCss from "github-markdown-css/github-markdown.css?url";
-import lightThemeCss from "github-markdown-css/github-markdown-light.css?url";
-import darkThemeCss from "github-markdown-css/github-markdown-dark.css?url";
-
 /**
  * Markdown 主题切换组合式函数
  * @returns 主题状态和切换方法
@@ -32,18 +27,18 @@ export const useMdTheme = () => {
     link.rel = "stylesheet";
     link.dataset.mdTheme = "true"; // 标记为 markdown 主题样式
 
-    // 根据主题类型加载对应的 CSS 文件
-    switch (theme) {
-      case "light":
-        link.href = lightThemeCss;
-        break;
-      case "dark":
-        link.href = darkThemeCss;
-        break;
-      default: // auto
-        link.href = autoThemeCss;
-    }
-    document.head.appendChild(link);
+    // // 根据主题类型加载对应的 CSS 文件
+    // switch (theme) {
+    //   case "light":
+    //     link.href = lightThemeCss;
+    //     break;
+    //   case "dark":
+    //     link.href = darkThemeCss;
+    //     break;
+    //   default: // auto
+    //     link.href = autoThemeCss;
+    // }
+    // document.head.appendChild(link);
   };
 
   // 监听主题变化（回调参数添加类型注解）

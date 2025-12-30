@@ -3,6 +3,7 @@ import tailwindcss from "@tailwindcss/vite";
 import vue from "@vitejs/plugin-vue";
 import Markdown from "vite-plugin-md";
 import hljs from "highlight.js";
+import path from "path"; // 新增
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -30,4 +31,9 @@ export default defineConfig({
       include: [/\.vue$/, /\.md$/],
     }),
   ],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
+  },
 });

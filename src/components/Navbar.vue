@@ -115,6 +115,6 @@ onMounted(() => {
 <style scoped>
 .font-zang {
   font-family: "Tsumachu", sans-serif;
-  color: var(--color-accent);
+  color: var(--color-primary);
 }
 </style>

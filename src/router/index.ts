@@ -8,6 +8,10 @@ import {
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import NotFound from "../views/NotFound.vue";
+import Links from "../views/Links.vue";
+import Tags from "../views/Tags.vue";
+import ArticleList from "../views/ArticleList.vue";
+import ArticleDetail from "../views/ArticleDetail.vue"; // 导入详情页组件
 
 // 第一步：扩展路由元信息的TypeScript类型（核心！解决meta类型提示）
 declare module "vue-router" {
@@ -25,6 +29,7 @@ const routes: Array<RouteRecordRaw> = [
     path: "/",
     redirect: "/home",
   },
+  { path: "/articles/:pathMatch(.*)*", component: ArticleDetail }, // 匹配所有文章路由
   {
     path: "/home",
     name: "Home",
@@ -34,6 +39,33 @@ const routes: Array<RouteRecordRaw> = [
       requiresAuth: false,
     },
     // 嵌套路由（TS同样约束）
+  },
+  {
+    path: "/articles",
+    name: "Articles",
+    component: Tags,
+    meta: {
+      title: "文章 | 星宿海",
+      requiresAuth: false,
+    },
+  },
+  {
+    path: "/links",
+    name: "Links",
+    component: Links,
+    meta: {
+      title: "链接 | 星宿海",
+      requiresAuth: false,
+    },
+  },
+  {
+    path: "/tags",
+    name: "Tags",
+    component: Tags,
+    meta: {
+      title: "标签 | 星宿海",
+      requiresAuth: false,
+    },
   },
   {
     path: "/about",
