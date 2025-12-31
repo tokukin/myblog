@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar bg-base-200 shadow-sm">
+  <div class="navbar bg-base-200 shadow-sm w-full">
     <div class="navbar-start">
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -21,24 +21,29 @@
         <ul
           tabindex="-1"
           class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow nav-menu"
-        ></ul>
+        >
+          <li v-for="navItem in siteConfig.nav" :key="navItem.href">
+            <router-link :to="navItem.href" exact-active-class="active">
+              {{ navItem.label }}
+            </router-link>
+          </li>
+        </ul>
       </div>
       <a class="btn btn-ghost text-xl">{{ siteConfig.title }}</a>
     </div>
 
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1 nav-menu">
-        <li><a router-link-exact-active="active" href="/home">首页</a></li>
-        <li>
-          <a router-link-exact-active="active" href="/content">所有文章</a>
+        <li v-for="navItem in siteConfig.nav" :key="navItem.href">
+          <router-link :to="navItem.href" exact-active-class="active">
+            {{ navItem.label }}
+          </router-link>
         </li>
-
-        <li><a router-link-exact-active="active" href="/about">关于</a></li>
       </ul>
     </div>
 
     <div class="navbar-end">
-      <a class="btn btn-ghost text-l primary">{{
+      <a class="btn btn-ghost text-l primary hidden lg:flex">{{
         siteConfig.description_hans
       }}</a>
       <a class="btn btn-ghost text-l primary font-zang">{{
@@ -101,14 +106,6 @@ const handleThemeToggle = (e: Event) => {
 
 onMounted(() => {
   console.log("组件已挂载");
-  let navMenu = document.querySelectorAll(".nav-menu");
-
-  navMenu.forEach((item) => {
-    item.innerHTML = "";
-    siteConfig.nav.forEach((navItem) => {
-      item.innerHTML += `<li><a router-link-exact-active="active" href="${navItem.href}">${navItem.label}</a></li>`;
-    });
-  });
 });
 </script>
 

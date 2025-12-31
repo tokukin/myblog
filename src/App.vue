@@ -7,12 +7,12 @@ import { ref } from "vue";
 </script>
 
 <template>
-  <div class="min-h-screen flex flex-col">
+  <div class="min-h-screen flex flex-col w-full overflow-x-hidden">
     <!-- 页面主体内容：占据剩余所有空间（关键！） -->
     <Navbar />
 
     <main id="page-container">
-      <div id="content-container">
+      <div id="content-container" class="pt-5 pl-5 pr-5 w-full lg:w-[60%]">
         <RouterView />
       </div>
     </main>
@@ -30,9 +30,5 @@ import { ref } from "vue";
   justify-content: left;
   flex: 1;
   width: 100%;
-}
-#content-container {
-  padding-top: 20px;
-  width: 60%;
 }
 </style>

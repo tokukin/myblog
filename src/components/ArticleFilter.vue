@@ -103,7 +103,7 @@ const formatDate = (dateInput: string | undefined): string => {
     const minutes = date.getMinutes().toString().padStart(2, "0");
 
     // 格式化为目标样式：2025年12月30日 14:00
-    return `${year}年${month}月${day}日 ${hours}:${minutes}`;
+    return `${year}年${month}月${day}日`;
   } catch (error) {
     console.warn("时间格式化失败：", error, "原始值：", dateInput);
     return "时间解析失败";

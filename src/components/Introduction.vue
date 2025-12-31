@@ -3,14 +3,14 @@
     <h1 class="heading">
       {{ siteConfig.title }}
     </h1>
-    <span class="text-rotate text-2xl text-primary">
+    <span class="text-rotate text-2xl">
       <span class="justify-items-start">
-        <span>开心快乐每一天!</span>
-        <span>扎西德勒!</span>
-        <span>身体健康!</span>
-        <span>1376!</span>
-        <span>热爱每一天!</span>
-        <span>😊😊😊😊😊</span>
+        <span class="text-primary">开心快乐每一天!</span>
+        <span class="text-neutral">扎西德勒!</span>
+        <span class="text-secondary">身体健康!</span>
+        <span class="text-primary">1376!</span>
+        <span class="text-accent">热爱每一天!</span>
+        <span class="text-primary">😊😊😊😊😊</span>
       </span>
     </span>
     <div class="paragraph">

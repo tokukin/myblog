@@ -87,7 +87,7 @@ const formatDate = (dateInput: string | undefined): string => {
     const day = date.getDate().toString().padStart(2, "0");
     const hours = date.getHours().toString().padStart(2, "0");
     const minutes = date.getMinutes().toString().padStart(2, "0");
-    return `${year}年${month}月${day}日 ${hours}:${minutes}`;
+    return `${year}年${month}月${day}日 `;
   } catch (error) {
     console.warn("时间格式化失败：", error, "原始值：", dateInput);
     return "时间解析失败";
